@@ -1,6 +1,12 @@
 # User journeys for review
 
-[Open the interactive mockup](index.html). The screens use a fixed example and manual steps; they demonstrate layout and transitions, not elapsed time or a completed game. Screens include welcome, memorize, blank interval, choice grid, round feedback, final score and interruption. Three review paths are available: first challenge, timeout, and interrupted session.
+The interactive mockup has three review paths: first challenge, timeout, and interrupted session. It uses a fixed example with manual steps and sample clocks. [Open the interactive mockup](index.html).
+
+## Flag presentation
+
+During study, one large national flag fills the center of a flat charcoal field. Pass and flag counters sit above the field. After the five-second gap, 25 flag images form a tight 5×5 grid. The timer and selection count sit above the board. A mint outline and checkmark show selections without moving the images.
+
+The user’s reference images informed scale and spacing. The demo uses its own board arrangement, includes Nicaragua as the first study example, and places similar designs such as Nicaragua and El Salvador on the board. The local SVGs use a consistent 4:3 display format. Country names appear in the review, where the player can also open the original study sequence.
 
 ## 1. First challenge: understand → observe → recognize → learn
 
@@ -18,7 +24,7 @@ flowchart LR
   I --> J[Replay with new flags]
 ```
 
-Review focus: the board must not look like a country-name quiz or a face-down pair game. Keep only one flag on screen during study. Show the selection cap, remaining time and clear next action.
+In the mockup, use **Next flag** to view the sequence or choose **Choose five** in the screen picker to jump to the board. Submit five flags to see which choices matched and which targets you missed.
 
 ## 2. Time expires with partial choices
 

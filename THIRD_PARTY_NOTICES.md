@@ -1,7 +1,7 @@
 # Third-party materials
 
-The initial review package bundles no third-party flag image files, fonts, show images, subtitles, music or video. The mockups use Unicode flag characters rendered by the viewer’s system; this is illustrative and will be replaced by locally bundled SVG artwork in the game.
+The mockup bundles 30 national flag SVGs from the [4:3 set in lipis/flag-icons v7.5.0](https://github.com/lipis/flag-icons/tree/v7.5.0/flags/4x3). The artwork is served locally. The [upstream MIT license and copyright notice](docs/review/flags/LICENSE) accompany the files.
 
-The proposed production flag source is [lipis/flag-icons](https://github.com/lipis/flag-icons), published under MIT. Before importing it, record the exact version, copy its full copyright/license notice here or into a dedicated license file, and preserve notices in the release artifact. No claim is made that the repository’s license relicenses third-party material.
+Keep the upstream notice with the review assets when packaging the release. Document the source version and license of the production catalog when it is selected.
 
 Research links in `docs/rules.md` are citations. Only original summaries and factual mechanics are included, not a copied transcript or wiki article.

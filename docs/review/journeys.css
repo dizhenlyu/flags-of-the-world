@@ -1,0 +1,184 @@
+:root {
+  color-scheme: light dark;
+  font: 16px/1.5 system-ui, sans-serif;
+  color: CanvasText;
+  background: Canvas;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 16px; }
+main { max-width: 1000px; margin: auto; }
+a { color: inherit; text-underline-offset: 4px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.65rem, 4vw, 2.5rem); letter-spacing: -.04em; }
+h2 { font-size: clamp(1.4rem, 3.8vw, 2rem); line-height: 1.12; letter-spacing: -.025em; }
+h3 { font-size: 1rem; }
+button, select { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+
+.project-links, .journeys, .preview-controls, .preview-controls > div, .actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-links { gap: 8px 18px; margin-bottom: 18px; font-size: .81rem; }
+.journeys { margin: 16px 0 10px; }
+.preview-controls { justify-content: space-between; margin: 12px 0; }
+.preview-controls label { display: flex; align-items: center; gap: 8px; }
+.review-note, .project-footer { font-size: .82rem; }
+.project-footer { margin-top: 24px; }
+
+.journeys button, .preview-controls button, .preview-controls select {
+  min-height: 44px;
+  background: Canvas;
+  color: CanvasText;
+  border: 1px solid GrayText;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+.journeys button[aria-pressed="true"] { color: Canvas; background: CanvasText; }
+:focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+
+.game {
+  color-scheme: dark;
+  --field: #131719;
+  --surface: #202628;
+  --border: #3f4a4d;
+  --text: #f1f5f4;
+  --muted: #b7c4c4;
+  --accent: #b5e4dc;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.game-header, .screen-top, .screen-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+}
+
+.game-header {
+  padding: 12px clamp(12px, 3vw, 26px);
+  border-bottom: 1px solid var(--border);
+  font-size: .875rem;
+}
+
+#mode, .game .muted { color: var(--muted); font-size: .875rem; }
+#screen { padding: clamp(12px, 3vw, 26px); }
+.game :focus-visible { outline-color: var(--accent); }
+
+.center { max-width: 720px; margin: auto; }
+.message { display: grid; justify-items: center; text-align: center; gap: 14px; padding-block: 40px; }
+.message p { max-width: 34rem; }
+.message .actions { justify-content: center; }
+.action {
+  min-height: 44px;
+  padding: 8px 14px;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.primary { color: #102c2a; background: var(--accent); border-color: var(--accent); }
+
+.screen-top { margin-bottom: 12px; }
+.screen-bottom { margin-top: 12px; }
+.readouts { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.timer, .score { font-variant-numeric: tabular-nums; font-weight: 650; }
+.timer { font-size: 1.2rem; }
+.timer-label { display: block; font-size: .75rem; color: var(--muted); }
+.score { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1; }
+
+.study-field, .hold-field, .board {
+  background: var(--field);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.study-field, .hold-field {
+  min-height: clamp(205px, 45vw, 420px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: clamp(8px, 3vw, 22px);
+}
+
+.flag { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.study-field .flag { width: min(100%, 490px); }
+.hold-field .timer { font-size: clamp(2.5rem, 8vw, 4rem); }
+.board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(4px, 1vw, 8px); padding: clamp(5px, 1.1vw, 9px); }
+
+.tile {
+  position: relative;
+  display: grid;
+  align-items: center;
+  padding: 0;
+  min-width: 0;
+  min-height: 44px;
+  border: 0;
+  background: var(--field);
+  color: var(--text);
+}
+
+.tile[aria-pressed="true"]::after {
+  position: absolute;
+  inset: 0;
+  border: 3px solid #b5e4dc;
+  box-shadow: inset 0 0 0 1px #162322;
+  content: "";
+  pointer-events: none;
+}
+
+.tile .mark {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 1;
+  width: 19px;
+  line-height: 19px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #102c2a;
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.tile .mark:empty { display: none; }
+.feedback { color: var(--muted); min-height: 1.5em; font-size: .875rem; }
+.review { display: grid; gap: 16px; }
+.outcome { border-top: 1px solid var(--border); padding-top: 10px; }
+.outcome ul, .sequence {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  gap: 8px;
+}
+.flag-item {
+  width: 100px;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  color: var(--muted);
+  font-size: .75rem;
+}
+.flag-item .flag { width: 64px; }
+.sequence .flag-item { width: 112px; }
+details summary { min-height: 44px; cursor: pointer; padding-block: 9px; }
+.round-scores { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }
+.round-scores li { display: grid; justify-items: center; }
+
+@media (max-width: 400px) {
+  body { padding-inline: 8px; }
+  #screen { padding-inline: 8px; }
+  .board { gap: 4px; padding: 4px; }
+}

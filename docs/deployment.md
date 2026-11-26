@@ -6,7 +6,7 @@ Repository: `dizhenlyu/flags-of-the-world` (public). Intended URL: `https://dizh
 
 The initial repository contains documentation and a manually advanced mockup, not the playable game. Publish the `main` branch’s `/docs` folder through Settings → Pages → Deploy from a branch. `docs/index.html` is the entry point and `docs/.nojekyll` prevents Jekyll processing. No build or runtime dependencies are needed for this phase.
 
-Verify the Pages build succeeds and the public URL returns the review title before advertising it as live. The README must continue to say “planning and design review.”
+Verify the Pages build succeeds and the public URL returns the review title. Open the study screen and board from the project URL to check that the relative CSS, JavaScript, and SVG paths resolve under `/flags-of-the-world/`. Preserve the upstream license beside the review artwork.
 
 ## Phase 1 — build and verify the game
 

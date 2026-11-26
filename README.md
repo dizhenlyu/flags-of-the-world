@@ -8,7 +8,7 @@ Watch ten flags. Remember what you saw. Find the five that return.
 
 ## Review the proposal
 
-- [Interactive journey mockups](https://dizhenlyu.github.io/flags-of-the-world/) — illustrative screens, not a working game.
+- [Interactive journey mockups](https://dizhenlyu.github.io/flags-of-the-world/) — a large study flag, a 5×5 selection board, and round review with national flag artwork.
 - [Rules and evidence](docs/rules.md) — episode timestamps, source conflict, and web adaptation decisions.
 - [Product and technical design](docs/superpowers/specs/2026-11-26-flags-of-the-world-design.md).
 - [Implementation plan](docs/superpowers/plans/2026-11-26-flags-of-the-world.md).
@@ -36,7 +36,7 @@ Open `docs/index.html` in a browser, or serve the documentation:
 python3 -m http.server 8000 --directory docs
 ```
 
-Visit `http://localhost:8000`. The walkthrough advances manually and uses a fixed example. There is no running timer, random generator, saved score, or competitive mode in this preview.
+Visit `http://localhost:8000`. Choose **First challenge** to step through the study flags and try the board. **Time runs out** and **Switch apps** show the two recovery paths. The walkthrough uses a fixed example with manual steps and sample scores.
 
 ## Contributing and license
 

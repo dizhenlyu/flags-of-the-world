@@ -41,14 +41,16 @@ See [journey diagrams](../../journeys.md) and [interactive review screens](../..
 1. **Welcome:** one Challenge action, a Practice alternative, and compact “10 → 25 → 5” explanation. Before first play show the timing, three rounds and device-local best behavior.
 2. **Ready / memorize:** load/decode all selected assets before countdown. One centered flag, pass 1/3 and flag 1/10. No country labels, previous thumbnails, next/rewind buttons or pause during a challenge. Transitions are instant, without animated flag distortion.
 3. **Hold:** a neutral five-second screen; neither study flag nor board remains visible.
-4. **Choose:** a fixed 5×5 grid with numbered cells, stable placement, selected markers, 0/5 counter and timer. Tile order never changes while answering. Submit at exactly five. The mockup uses illustrative emoji only; production uses bundled, consistently rendered SVGs.
+4. **Choose:** a compact 5×5 grid of local flag SVGs with stable placement. The timer and selection count sit above the board. Selection adds a high-contrast outline and checkmark without shifting any flag. Use descriptive accessible labels during the challenge and show country names in review. Submit at exactly five.
 5. **Round review:** correct, wrong, and missed categories use text/icons as well as colors; reveal names and the entire study sequence. Correct-but-absent study flags are labeled “not on board,” not “missed.” Next round is explicit.
 6. **Results:** total /15 and per-round scores. Challenge best only for completed eligible runs. Replay creates a new seed; Practice has no comparison against challenge best.
 7. **Interruption:** neutral overlay immediately on visibility loss; invalidate an active challenge attempt. On return, a fresh round continues the session but the entire match is marked ineligible for a record. Refresh discards in-progress gameplay; only settings/completed best persist.
 
 ## Visual direction and accessibility
 
-Proposed direction: quiet atlas-like interface, generous spacing, ink/cream neutrals with restrained teal, strong rectangular flag presentation, and no TV visual assets. The mockup offers compact/comfortable density and theme alternatives for review.
+The user’s references emphasize two compositions: a single, large flag during memorization and a dense board of rectangular flags during selection. Use a flat charcoal play area, restrained mint controls, square image edges, and compact board gutters. Keep progress, timing, instructions, and controls outside the flag area. Use national flag artwork with local SVGs and an original sample arrangement.
+
+The review uses the uniform 4:3 artwork from `flag-icons` v7.5.0. Display using the source asset's aspect ratio without adding CSS stretching or cropping. Review the catalog at small tile sizes before launch, including white flags, detailed emblems, and similar color patterns.
 
 The 5×5 board must fit at 320 CSS px: minimum 44×44 effective targets, at least 4 px separation, no horizontal scrolling. On desktop use larger cards; on mobile remove peripheral chrome before shrinking the board. Country names only appear outside challenge play. Keyboard users use normal Tab, Enter/Space; visible focus is never suppressed. Status announcements cover phase, selection counts, and meaningful time warnings, not every second. Reduced motion removes decorative transitions. Preserve score with numeric text and explicit outcome labels for colorblind users.
 
