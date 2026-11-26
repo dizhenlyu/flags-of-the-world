@@ -33,6 +33,11 @@ test('preserves the interactive design review and its relative flag assets', asy
   await page.locator('#step').selectOption({ label: 'Memorize' });
   const image = page.locator('.study-field img');
   await expect(image).toBeVisible();
-  expect(await image.evaluate(img => (img as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+  const width = await image.evaluate(async image => {
+    const flag = image as HTMLImageElement;
+    await flag.decode();
+    return flag.naturalWidth;
+  });
+  expect(width).toBeGreaterThan(0);
   expect(await image.getAttribute('src')).toMatch(/^review\/flags\//);
 });
