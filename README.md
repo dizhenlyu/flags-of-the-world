@@ -1,45 +1,37 @@
 # Flags of the World
 
-An open-source HTML5 visual-memory mini game inspired by the flag recognition challenge in *The Devil’s Plan: Dead Again*, Season 3, Exile Match 06.
+Watch ten flags. Find the five that return.
 
-**Status: planning and design review. The playable game is not implemented yet.**
+Flags of the World is an open-source solo visual-memory game inspired by the flag recognition challenge in *The Devil’s Plan: Dead Again*, Season 3, Exile Match 06.
 
-Watch ten flags. Remember what you saw. Find the five that return.
+- [Play Flags of the World](https://dizhenlyu.github.io/flags-of-the-world/)
+- [Explore the archived interactive design review](https://dizhenlyu.github.io/flags-of-the-world/design-review/)
 
-## Review the proposal
+## How to play
 
-- [Interactive journey mockups](https://dizhenlyu.github.io/flags-of-the-world/) — a large study flag, a 5×5 selection board, and round review with national flag artwork.
-- [Rules and evidence](docs/rules.md) — episode timestamps, source conflict, and web adaptation decisions.
-- [Product and technical design](docs/superpowers/specs/2026-11-26-flags-of-the-world-design.md).
-- [Implementation plan](docs/superpowers/plans/2026-11-26-flags-of-the-world.md).
-- [GitHub Pages deployment plan](docs/deployment.md).
-- [User journeys](docs/journeys.md) — first session, replay, timeout, interruption.
+Each Challenge round shows ten distinct flags for one second each, in the same order three times. After a five-second gap, find five of those flags among 25 choices. Submit when you have five choices or let the 60-second timer score your current picks. Each match earns one point, with a maximum of 15 points across three rounds.
 
-## Core loop
+Practice gives you two seconds per study flag and unlimited time to choose. You can turn on country names before starting Practice. Use touch or Tab and Enter/Space to choose flags. The round review reveals every correct choice, incorrect choice and missed target.
 
-1. See ten distinct flags, one second each, in the same order three times: 30 seconds.
-2. Wait through a five-second blank interval.
-3. Select five familiar flags from 25 choices within **60 seconds**.
-4. Receive one point per correct selection; play three rounds, up to 15 points.
+Challenge saves the best eligible three-round score in this browser. Switching away during an active round replaces the interrupted attempt with a freshly generated one and makes the session ineligible for a device best. Refreshing returns to the welcome screen.
 
-The one-minute selection window comes from the episode 12 English subtitle track (08:46–08:53). An English wiki summary says two minutes; that discrepancy is recorded in the rules document. This is a source-based reconstruction, not an official rulebook.
+## Development
 
-## Intended first release
-
-Solo challenge and practice, responsive desktop/mobile UI, keyboard operation, local personal best, and bundled SVG flags. Proposed stack: TypeScript + Vite + semantic HTML/CSS, Vitest, and Playwright. No account or backend required. Multiplayer is later scope.
-
-## Preview locally
-
-Open `docs/index.html` in a browser, or serve the documentation:
+Use the Node version in `.node-version`, then run:
 
 ```sh
-python3 -m http.server 8000 --directory docs
+npm ci
+npm run dev
 ```
 
-Visit `http://localhost:8000`. Choose **First challenge** to step through the study flags and try the board. **Time runs out** and **Switch apps** show the two recovery paths. The walkthrough uses a fixed example with manual steps and sample scores.
+See the [deployment guide](docs/deployment.md) for production preview and verification commands. The game uses TypeScript, Vite and 64 locally bundled national flag SVGs. Gameplay and records run entirely in your browser.
 
-## Contributing and license
+## Project documents
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Original code, diagrams, and documentation are [MIT licensed](LICENSE). Third-party assets keep their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- [Rules and evidence](docs/rules.md)
+- [Design specification](docs/superpowers/specs/2026-11-26-flags-of-the-world-design.md)
+- [Implementation plan](docs/superpowers/plans/2026-11-26-flags-of-the-world.md)
+- [Player journeys](docs/journeys.md)
+- [Contributing](CONTRIBUTING.md)
 
-This is an independent fan project, unaffiliated with Netflix or TEO. No show footage, subtitles, music, logos, or contestant images are distributed here.
+Original code and documentation are [MIT licensed](LICENSE). See the [third-party notices](THIRD_PARTY_NOTICES.md) for artwork attribution. This independent fan project is unaffiliated with Netflix or TEO.

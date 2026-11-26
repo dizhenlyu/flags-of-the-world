@@ -1,6 +1,6 @@
 # Contributing
 
-This project is currently at design review. Start with [the rules evidence](docs/rules.md) and [the implementation plan](docs/superpowers/plans/2026-11-26-flags-of-the-world.md).
+For gameplay changes, start with [the rules evidence](docs/rules.md) and [the implementation plan](docs/superpowers/plans/2026-11-26-flags-of-the-world.md).
 
 For a rules correction, provide an episode/timecode or public source and separate observed rules from proposed adaptations. Do not upload show clips, subtitles or screenshots. For a flag correction, include the catalog ID, source and asset license. For a bug, include browser, device, ruleset version, seed if available, expected behavior and reproduction steps.
 

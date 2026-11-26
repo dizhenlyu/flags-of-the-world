@@ -1,7 +1,7 @@
 # Third-party materials
 
-The mockup bundles 30 national flag SVGs from the [country-flags collection at revision c09927e](https://github.com/hampusborgos/country-flags/tree/c09927e63705529bbf59ca6684cd9b23225dddad). The source identifies the artwork as public domain and traces it to Wikimedia Commons. The artwork is served locally with the source SVG proportions.
+The game catalog `national-flags-v1` bundles 64 national flag SVGs, and the archived design review bundles 30, from the [country-flags collection at revision c09927e](https://github.com/hampusborgos/country-flags/tree/c09927e63705529bbf59ca6684cd9b23225dddad).
 
-Keep this source notice with the review assets when packaging the release. Document the source version and license of the production catalog when it is selected.
+The artwork is served locally in its original SVG proportions. The upstream project identifies the artwork as public domain and traces it to Wikimedia Commons. Its full licensing notice is in the [preserved upstream README](COUNTRY_FLAGS_SOURCE.md).
 
-Research links in `docs/rules.md` are citations. Only original summaries and factual mechanics are included, not a copied transcript or wiki article.
+Research links in [the rules evidence](docs/rules.md) document the source material. The repository contains original summaries and factual mechanics.
