@@ -32,7 +32,6 @@ button:disabled { opacity: .5; cursor: default; }
 }
 .game-header,
 .screen-top,
-.screen-bottom,
 .home-footer,
 .actions {
   display: flex;
@@ -117,7 +116,7 @@ button:disabled { opacity: .5; cursor: default; }
 .message p { max-width: 34rem; }
 
 .screen-top { margin-bottom: 12px; }
-.screen-bottom { margin-top: 14px; }
+.screen-bottom { display: flex; justify-content: flex-end; margin-top: 14px; }
 .study-field, .hold-field, .board {
   background: var(--field);
   border: 1px solid var(--border);
@@ -229,5 +228,4 @@ details summary { min-height: 44px; padding-block: 9px; cursor: pointer; font-we
   .instructions { grid-template-columns: 1fr; }
   .select-top { flex-wrap: nowrap; align-items: start; }
   .select-top h1 { font-size: 1.35rem; }
-  .screen-bottom .action { padding-inline: 9px; font-size: .9rem; }
 }

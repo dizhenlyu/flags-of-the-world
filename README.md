@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-See the [deployment guide](docs/deployment.md) for production preview and verification commands. The game uses TypeScript, Vite and 64 locally bundled national flag SVGs. Gameplay and records run entirely in your browser.
+See the [deployment guide](docs/deployment.md) for production preview and verification commands. The game uses TypeScript and Vite and bundles SVG flags for all [193 United Nations member states](https://www.un.org/en/about-us/member-states). Gameplay and records run entirely in your browser.
 
 ## Project documents
 

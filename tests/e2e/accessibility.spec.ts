@@ -5,6 +5,7 @@ test('fits a compact five-column board at 320, 390, 768 and 1440 CSS pixels', as
   await openGame(page);
   await startRound(page);
   await reachBoard(page);
+  await expect(button(page, 'Leave session')).toHaveCount(0);
 
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
@@ -24,6 +25,10 @@ test('fits a compact five-column board at 320, 390, 768 and 1440 CSS pixels', as
     expect(layout.rows).toBe(5);
     expect(Math.min(...layout.widths, ...layout.heights)).toBeGreaterThanOrEqual(44);
     expect(layout.gap).toBeGreaterThanOrEqual(4);
+    const board = await page.locator('.board').boundingBox();
+    const submit = await button(page, 'Submit choices').boundingBox();
+    expect(submit!.y).toBeGreaterThan(board!.y + board!.height);
+    expect(Math.abs(submit!.x + submit!.width - board!.x - board!.width)).toBeLessThan(1);
   }
 });
 

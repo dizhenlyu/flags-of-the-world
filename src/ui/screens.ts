@@ -138,7 +138,7 @@ export function screen(state: GameState, record: RecordDisplay) {
           </button>`;
         }).join('')}
       </div>
-      <div class="screen-bottom">${action('Submit choices', 'submit', true)}${action('Leave session', 'home')}</div>`;
+      <div class="screen-bottom">${action('Submit choices', 'submit', true)}</div>`;
     case 'review':
       return review(state);
     case 'results':
