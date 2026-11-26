@@ -83,7 +83,7 @@ let selected;
 let locked;
 
 function image(code, alt = '') {
-  return `<img class="flag" src="review/flags/${code}.svg" alt="${alt}" width="640" height="480" draggable="false">`;
+  return `<img class="flag" src="review/flags/${code}.svg" alt="${alt}" draggable="false">`;
 }
 
 function action(label, name, primary = false) {

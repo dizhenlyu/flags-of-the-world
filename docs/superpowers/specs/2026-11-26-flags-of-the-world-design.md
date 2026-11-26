@@ -50,7 +50,7 @@ See [journey diagrams](../../journeys.md) and [interactive review screens](../..
 
 The user’s references emphasize two compositions: a single, large flag during memorization and a dense board of rectangular flags during selection. Use a flat charcoal play area, restrained mint controls, square image edges, and compact board gutters. Keep progress, timing, instructions, and controls outside the flag area. Use national flag artwork with local SVGs and an original sample arrangement.
 
-The review uses the uniform 4:3 artwork from `flag-icons` v7.5.0. Display using the source asset's aspect ratio without adding CSS stretching or cropping. Review the catalog at small tile sizes before launch, including white flags, detailed emblems, and similar color patterns.
+The review uses original-ratio artwork from the pinned `country-flags` source. Fit the whole flag in its study frame and in equal board cells. Preserve the asset’s width-to-height ratio and leave neutral space around it as needed. Review the catalog at small tile sizes before launch, including white flags, detailed emblems, and similar color patterns.
 
 The 5×5 board must fit at 320 CSS px: minimum 44×44 effective targets, at least 4 px separation, no horizontal scrolling. On desktop use larger cards; on mobile remove peripheral chrome before shrinking the board. Country names only appear outside challenge play. Keyboard users use normal Tab, Enter/Space; visible focus is never suppressed. Status announcements cover phase, selection counts, and meaningful time warnings, not every second. Reduced motion removes decorative transitions. Preserve score with numeric text and explicit outcome labels for colorblind users.
 
@@ -81,7 +81,7 @@ For memorization, each flag must get a complete nominal exposure starting from i
 
 Catalog must supply at least 30 mutually distinguishable eligible flags: ten study flags plus 20 distractors. Require unique IDs and no visual-equivalence collision across the entire 30-flag round union. Select all 30 deterministically from the eligible catalog, partition into study and distractors, choose targets from study, shuffle board. Throw a typed configuration error if constraints cannot be met; never spin indefinitely. Keep visually identical variants out of the first catalog; do not rely on pixel differences users cannot perceive.
 
-Use a checked-in catalog version and RNG version in stored results and future seed links. Source proposed SVGs from [flag-icons](https://github.com/lipis/flag-icons), preserve its MIT notice, and review the chosen normalized artwork for differences important to recognition. Do not use emoji or a live CDN in production. Name the reviewed catalog as an explicit country/territory selection rather than claiming diplomatic completeness.
+Use a checked-in catalog version and RNG version in stored results and future seed links. Use original-ratio SVGs from a pinned catalog, such as the [country-flags collection](https://github.com/hampusborgos/country-flags). Keep the source notice and review differences important to recognition. Bundle assets locally. Name the reviewed catalog as an explicit country/territory selection.
 
 ## Acceptance criteria
 

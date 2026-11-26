@@ -1,7 +1,7 @@
 # Third-party materials
 
-The mockup bundles 30 national flag SVGs from the [4:3 set in lipis/flag-icons v7.5.0](https://github.com/lipis/flag-icons/tree/v7.5.0/flags/4x3). The artwork is served locally. The [upstream MIT license and copyright notice](docs/review/flags/LICENSE) accompany the files.
+The mockup bundles 30 national flag SVGs from the [country-flags collection at revision c09927e](https://github.com/hampusborgos/country-flags/tree/c09927e63705529bbf59ca6684cd9b23225dddad). The source identifies the artwork as public domain and traces it to Wikimedia Commons. The artwork is served locally with the source SVG proportions.
 
-Keep the upstream notice with the review assets when packaging the release. Document the source version and license of the production catalog when it is selected.
+Keep this source notice with the review assets when packaging the release. Document the source version and license of the production catalog when it is selected.
 
 Research links in `docs/rules.md` are citations. Only original summaries and factual mechanics are included, not a copied transcript or wiki article.

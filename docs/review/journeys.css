@@ -103,29 +103,31 @@ button:disabled { opacity: .5; cursor: default; }
 }
 
 .study-field, .hold-field {
-  min-height: clamp(205px, 45vw, 420px);
+  height: clamp(205px, 45vw, 420px);
   display: grid;
+  grid-template-rows: minmax(0, 1fr);
   place-items: center;
   text-align: center;
   padding: clamp(8px, 3vw, 22px);
 }
 
-.flag { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
-.study-field .flag { width: min(100%, 490px); }
+.flag { display: block; width: 100%; height: 100%; object-fit: contain; }
+.study-field .flag { width: min(100%, 620px); }
 .hold-field .timer { font-size: clamp(2.5rem, 8vw, 4rem); }
 .board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(4px, 1vw, 8px); padding: clamp(5px, 1.1vw, 9px); }
 
 .tile {
   position: relative;
-  display: grid;
-  align-items: center;
   padding: 0;
   min-width: 0;
   min-height: 44px;
+  aspect-ratio: 8 / 5;
   border: 0;
   background: var(--field);
   color: var(--text);
 }
+
+.tile .flag { position: absolute; inset: 0; }
 
 .tile[aria-pressed="true"]::after {
   position: absolute;
@@ -171,7 +173,7 @@ button:disabled { opacity: .5; cursor: default; }
   color: var(--muted);
   font-size: .75rem;
 }
-.flag-item .flag { width: 64px; }
+.flag-item .flag { width: 64px; height: 48px; object-position: left center; }
 .sequence .flag-item { width: 112px; }
 details summary { min-height: 44px; cursor: pointer; padding-block: 9px; }
 .round-scores { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; }

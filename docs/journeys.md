@@ -6,7 +6,7 @@ The interactive mockup has three review paths: first challenge, timeout, and int
 
 During study, one large national flag fills the center of a flat charcoal field. Pass and flag counters sit above the field. After the five-second gap, 25 flag images form a tight 5×5 grid. The timer and selection count sit above the board. A mint outline and checkmark show selections without moving the images.
 
-The user’s reference images informed scale and spacing. The demo uses its own board arrangement, includes Nicaragua as the first study example, and places similar designs such as Nicaragua and El Salvador on the board. The local SVGs use a consistent 4:3 display format. Country names appear in the review, where the player can also open the original study sequence.
+The user’s reference images informed scale and spacing. The demo uses its own board arrangement, includes Nicaragua as the first study example, and places similar designs such as Nicaragua and El Salvador on the board. Each flag keeps its source proportions. Equal board cells fit the entire image, with charcoal space where the aspect ratios differ. Country names appear in the review, where the player can also open the original study sequence.
 
 ## 1. First challenge: understand → observe → recognize → learn
 
